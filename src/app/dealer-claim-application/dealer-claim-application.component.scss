@@ -1,0 +1,72 @@
+.dealer-claim-application-container {
+    width: 100%;
+    max-width: 1622px;
+    margin: auto;
+    background-color: #f0e8f8;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  .header {
+    background-color: #a785d3;
+    color: white;
+    padding: 10px;
+    border-radius: 10px 10px 0 0;
+    text-align: center;
+  }
+  
+  .form-section {
+    margin-bottom: 20px;
+  }
+  
+  .form-row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-bottom: 10px;
+  }
+  
+  .form-group {
+    width: calc(33.33% - 10px);
+    margin-bottom: 10px;
+  }
+  
+  .form-group label {
+    display: block;
+    margin-bottom: 5px;
+  }
+  
+  .form-group input,
+  .form-group select {
+    width: 100%;
+    padding: 8px;
+    box-sizing: border-box;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+  }
+  
+  .policy-details-section {
+    margin-top: 20px;
+  }
+  
+  .policy-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+  }
+  
+  .policy-table th,
+  .policy-table td {
+    border: 1px solid #ddd;
+    padding: 10px;
+    text-align: left;
+  }
+  
+  .policy-table th {
+    background-color: #eee;
+  }
+  
+  .policy-table td {
+    background-color: #fff;
+  }

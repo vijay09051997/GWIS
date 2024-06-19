@@ -1,0 +1,67 @@
+<div class="container">
+    <h2>Parts & Labour Cost</h2>
+    <h4>Part Cost Details</h4>
+    <table class="table">
+      <thead>
+        <tr>
+          <th>Operation</th>
+          <th>Parts</th>
+          <th>Cause of Failure</th>
+          <th>Part Cost</th>
+          <th>Dealer Discount</th>
+          <th>Good Will%</th>
+          <th>Labour Cost</th>
+          <th>Labour Hours</th>
+          <th>Dealer Discount</th>
+          <th>Good Will Discount</th>
+          <th>Total</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let record of partCostDetails">
+          <td><select><option value="" disabled selected>Select</option></select></td>
+          <td><select><option value="" disabled selected>Select</option></select></td>
+          <td><select><option value="" disabled selected>Select</option></select></td>
+          <td>{{ record.partCost }}</td>
+          <td>{{ record.dealerDiscount }}</td>
+          <td>{{ record.goodWill }}</td>
+          <td>{{ record.labourCost }}</td>
+          <td>{{ record.labourHours }}</td>
+          <td>{{ record.dealerDiscount }}</td>
+          <td>{{ record.goodWillDiscount }}</td>
+          <td>{{ record.total }}</td>
+        </tr>
+      </tbody>
+      <tfoot>
+        <tr>
+          <td colspan="1">Part cost</td>
+          <td colspan="10">{{ partCostSum }}</td>
+        </tr>
+        <tr>
+          <td colspan="1">Total Service Cost</td>
+          <td colspan="10">{{ totalServiceCost }}</td>
+        </tr>
+        <tr>
+          <td colspan="1">Amount after other Discount</td>
+          <td colspan="10">{{ amountAfterDiscount }}</td>
+        </tr>
+        <tr>
+          <td colspan="1">Deductible</td>
+          <td colspan="10">{{ deductible }}</td>
+        </tr>
+        <tr>
+          <td colspan="1">Tax %</td>
+          <td colspan="10">{{ taxPercentage }}</td>
+        </tr>
+        <tr>
+          <td colspan="1">Tax Value</td>
+          <td colspan="10">{{ taxValue }}</td>
+        </tr>
+        <tr>
+          <td colspan="1">Total Claim Amount</td>
+          <td colspan="10">{{ totalClaimAmount }}</td>
+        </tr>
+      </tfoot>
+    </table>
+  </div>
+  

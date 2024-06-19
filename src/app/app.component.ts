@@ -8,8 +8,13 @@ import { Component } from '@angular/core';
 export class AppComponent {
   title = 'GWIS';
   isPolicySearchMenuOpen = false;
+  isClaimSearchMenuOpen = false;
 
   togglePolicySearchMenu() {
     this.isPolicySearchMenuOpen = !this.isPolicySearchMenuOpen;
+  }
+  toggleClaimSearchMenu(){
+    this.isClaimSearchMenuOpen = !this.isClaimSearchMenuOpen;
+
   }
 }

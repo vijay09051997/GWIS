@@ -1,0 +1,37 @@
+<div class="dashboard">
+  <h1>Service History</h1>
+  <div class="search-bar">
+    <label>
+      Service Schedule (Months)
+      <input type="text" >
+    </label>
+    <label>
+      Service Schedule (Km)
+      <input type="text">
+    </label>
+  </div>
+  <table>
+    <thead>
+      <tr>
+        <th>SVC Invoice Date</th>
+        <th>SVC ODO Meter Reading</th>
+        <th>Periodical Service Done/Delayed/Missing (Mileage)</th>
+        <th>Periodical Service Done/Delayed/Missing (Period)</th>
+        <th>Service Center</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let record of serviceRecords">
+        <td>{{ record.invoiceDate }}</td>
+        <td>{{ record.odoMeterReading }}</td>
+        <td>{{ record.serviceMileage }}</td>
+        <td [ngClass]="{'text-danger': record.servicePeriod.includes('no SVC')}">{{ record.servicePeriod }}</td>
+        <td>{{ record.serviceCenter }}</td>
+      </tr>
+    </tbody>
+  </table>
+  <div class="button-section">
+    <button>Back</button>
+    <button>Process Claim</button>
+  </div>
+</div>

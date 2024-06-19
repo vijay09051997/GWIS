@@ -19,12 +19,19 @@
     <nav class="sidebar-navigation">
       <ul>
         <li>
-          <a href="#" (click)="togglePolicySearchMenu()">Policy Search</a>
+          <a routerLink="/policy" (click)="togglePolicySearchMenu()">Policy Search</a>
           <ul *ngIf="isPolicySearchMenuOpen">
-            <li><a href="#">Claim</a></li>
+            <li><a routerLink="/claim-history" (click)="toggleClaimSearchMenu()">Claim</a></li>
             <!-- Add more sub-items as needed -->
+            <ul *ngIf="isClaimSearchMenuOpen">
+              <li><a routerLink="/part-labour">New Claim</a></li>
+              <li><a routerLink="/invoice" >Performance Invoice</a></li>
+              <li><a routerLink="/claim-manager" >Claim manager</a></li>
+              <!-- Add more sub-items as needed -->
+            </ul>
           </ul>
         </li>
+        <li><a routerLink="/service-advisor">Service Advisor</a></li>
         <!-- Add other navigation items as needed -->
       </ul>
     </nav>

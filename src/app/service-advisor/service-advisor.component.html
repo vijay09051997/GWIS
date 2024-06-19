@@ -1,0 +1,39 @@
+<div class="dashboard">
+    <h1>Service Advisor Dashboard</h1>
+    <div class="search-bar">
+      <label>
+        Dealer Name:
+        <input type="text" [(ngModel)]="dealerName">
+      </label>
+      <label>
+        Submission Date:
+        <input type="date" [(ngModel)]="submissionDate">
+      </label>
+      <button (click)="search()">Search</button>
+      <button (click)="reset()">Reset</button>
+    </div>
+    <table>
+      <thead>
+        <tr>
+          <th>Dealer Name</th>
+          <th>Submission Date</th>
+          <th>Claim Ref. No.</th>
+          <th>GWIS Reply Date</th>
+          <th>GWIS Reply Status</th>
+          <th>Approved Claim Job</th>
+          <th>Claims Invoice</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let item of dataSource">
+          <td>{{ item.dealerName }}</td>
+          <td>{{ item.submissionDate }}</td>
+          <td><a routerLink="/claim-ref">{{ item.claimRefNo }}</a></td>
+          <td>{{ item.gwisReplyDate }}</td>
+          <td>{{ item.status }}</td>
+          <td>{{ item.approvedJob }}</td>
+          <td><a routerLink="/part-labour">View</a></td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
