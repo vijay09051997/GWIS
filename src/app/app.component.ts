@@ -7,4 +7,9 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'GWIS';
+  isPolicySearchMenuOpen = false;
+
+  togglePolicySearchMenu() {
+    this.isPolicySearchMenuOpen = !this.isPolicySearchMenuOpen;
+  }
 }

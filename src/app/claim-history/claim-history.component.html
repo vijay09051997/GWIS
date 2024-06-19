@@ -1,0 +1,22 @@
+<div class="claim-history-container">
+    <div class="header">
+      <h2>Vehicle Claim History | GBCD032025</h2>
+    </div>
+    <table class="claim-table">
+      <thead>
+        <tr>
+          <th>No. Of Claims</th>
+          <th>Status</th>
+          <th>Claim Amount</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let claim of claims">
+          <td>{{ claim.noOfClaims }}</td>
+          <td><a routerLink="/detail-claim-history">{{ claim.status }}</a></td>
+          <td>{{ claim.claimAmount | currency: 'USD' }}</td>
+        </tr>
+      </tbody>
+    </table>
+    <button class="close-button" (click)="close()">Close</button>
+  </div>

@@ -1,0 +1,70 @@
+.detailed-claim-history-container {
+    width: 100%;
+    max-width: 1634px;
+    margin: auto;
+    background-color: #f0e8f8;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  .header {
+    background-color: #a785d3;
+    color: white;
+    padding: 10px;
+    border-radius: 10px 10px 0 0;
+    text-align: center;
+  }
+  
+  .filters {
+    margin: 20px 0;
+  }
+  
+  .filter-row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-bottom: 10px;
+  }
+  
+  .filter-row label {
+    width: 100px;
+  }
+  
+  .filter-row input,
+  .filter-row select {
+    width: calc(20% - 110px);
+    margin-right: 10px;
+  }
+  
+  .search-button {
+    display: block;
+    width: 100px;
+    margin: 20px auto;
+    padding: 10px;
+    background-color: #a785d3;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .search-button:hover {
+    background-color: #6f42c1;
+  }
+  
+  .claim-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+  }
+  
+  .claim-table th, .claim-table td {
+    border: 1px solid #ddd;
+    padding: 10px;
+    text-align: left;
+  }
+  
+  .claim-table th {
+    background-color: #eee;
+  }

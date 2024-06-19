@@ -1,0 +1,103 @@
+/* Policy Component Styles */
+.policy-search {
+    padding: 20px;
+    background-color: #e0e0eb;
+    border-radius: 8px;
+  }
+  
+  .policy-search h1 {
+    margin-top: 0;
+    background-color: #d4c1e6;
+    padding: 10px;
+    border-radius: 8px;
+  }
+  
+  .policy-search form {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+  }
+  
+  .form-group {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .form-group label {
+    margin-bottom: 5px;
+    font-weight: bold;
+  }
+  
+  .form-group input {
+    padding: 5px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+  }
+  
+  button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    background-color: #d14be0;
+    color: #fff;
+    font-weight: bold;
+    cursor: pointer;
+  }
+  
+  button[type="reset"] {
+    background-color: #777;
+  }
+  
+  button:hover {
+    background-color: #b735d1;
+  }
+  
+  .policy-list {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  .policy-list h2 {
+    margin-top: 0;
+  }
+  
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+  }
+  
+  table th, table td {
+    border: 1px solid #ccc;
+    padding: 10px;
+    text-align: left;
+  }
+  
+  table th {
+    background-color: #f4f4f4;
+  }
+  
+  .highlight {
+    background-color: #fdd;
+    border: 2px solid red;
+    padding: 5px;
+    border-radius: 4px;
+  }
+  
+  .policy-list a {
+    color: #d14be0;
+    text-decoration: none;
+  }
+  
+  .policy-list a:hover {
+    text-decoration: underline;
+  }
+  
+  .policy-list button {
+    display: block;
+    margin: 0 auto;
+  }
+  

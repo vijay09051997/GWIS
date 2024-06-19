@@ -1,0 +1,80 @@
+<div class="detailed-claim-history-container">
+    <div class="header">
+      <h2>Detailed Claim History | GBCD032025</h2>
+    </div>
+    <div class="filters">
+      <div class="filter-row">
+        <label for="claimNo">Claim No.</label>
+        <input type="text" id="claimNo" [(ngModel)]="filters.claimNo" />
+        <label for="policyNo">Policy No.</label>
+        <input type="text" id="policyNo" [(ngModel)]="filters.policyNo" />
+        <label for="fromDate">From Date</label>
+        <input type="date" id="fromDate" [(ngModel)]="filters.fromDate" />
+        <label for="toDate">To Date</label>
+        <input type="date" id="toDate" [(ngModel)]="filters.toDate" />
+      </div>
+      <div class="filter-row">
+        <label for="workshop">Workshop</label>
+        <select id="workshop" [(ngModel)]="filters.workshop">
+          <option *ngFor="let workshop of workshops" [value]="workshop">{{ workshop }}</option>
+        </select>
+        <label for="claimStatus">Claim Status</label>
+        <select id="claimStatus" [(ngModel)]="filters.claimStatus">
+          <option *ngFor="let status of statuses" [value]="status">{{ status }}</option>
+        </select>
+        <label for="invoiceNo">Invoice No.</label>
+        <input type="text" id="invoiceNo" [(ngModel)]="filters.invoiceNo" />
+        <label for="payee">Payee</label>
+        <select id="payee" [(ngModel)]="filters.payee">
+          <option *ngFor="let payee of payees" [value]="payee">{{ payee }}</option>
+        </select>
+        <label for="dealer">Dealer</label>
+        <select id="dealer" [(ngModel)]="filters.dealer">
+          <option *ngFor="let dealer of dealers" [value]="dealer">{{ dealer }}</option>
+        </select>
+      </div>
+      <button class="search-button" (click)="search()">Search</button>
+    </div>
+    <table class="claim-table">
+      <thead>
+        <tr>
+          <th>Policy No.</th>
+          <th>Claim No.</th>
+          <th>Claim Status</th>
+          <th>Claim Date</th>
+          <th>Payee</th>
+          <th>Repairer</th>
+          <th>Part Details</th>
+          <th>Service Details</th>
+          <th>Total Parts Cost</th>
+          <th>Total Labour Cost</th>
+          <th>Total Service Cost</th>
+          <th>Tax Value</th>
+          <th>Total Claim Amount</th>
+          <th>Paid Value</th>
+          <th>Inspect Done</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let claim of claims">
+          <td>{{ claim.policyNo }}</td>
+          <td>{{ claim.claimNo }}</td>
+          <td>{{ claim.claimStatus }}</td>
+          <td>{{ claim.claimDate | date }}</td>
+          <td>{{ claim.payee }}</td>
+          <td>{{ claim.repairer }}</td>
+          <td>{{ claim.partDetails }}</td>
+          <td>{{ claim.serviceDetails }}</td>
+          <td>{{ claim.totalPartsCost | currency }}</td>
+          <td>{{ claim.totalLabourCost | currency }}</td>
+          <td>{{ claim.totalServiceCost | currency }}</td>
+          <td>{{ claim.taxValue | currency }}</td>
+          <td>{{ claim.totalClaimAmount | currency }}</td>
+          <td>{{ claim.paidValue | currency }}</td>
+          <td>{{ claim.inspectDone }}</td>
+          <td>Eye</td>
+
+        </tr>
+      </tbody>
+    </table>
+  </div>
